@@ -1,17 +1,15 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {appTabs} from './util/AppTabs';
 import {Image, Text, View} from 'react-native';
-import {exploreGlobeIcon} from '../constants/imageUrl';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 const Tabs = createBottomTabNavigator();
 
-export type tabTypes = 'DashBoardTab' | 'ExploreTab' | 'HistoryTab';
-const MainStackNavigator = () => {
+const MainTabsNavigator = () => {
   const insets = useSafeAreaInsets();
   return (
     <Tabs.Navigator
-      initialRouteName="DashBoardTab"
+      initialRouteName="Dashboard"
       screenOptions={{
         lazy: true,
         headerShown: false,
@@ -53,4 +51,4 @@ const MainStackNavigator = () => {
   );
 };
 
-export default MainStackNavigator;
+export default MainTabsNavigator;
