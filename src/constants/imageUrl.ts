@@ -8,3 +8,5 @@ export const polygonIcon =
   'https://res.cloudinary.com/krishanucloud/image/upload/v1704340841/polygonIcon_ebatzw.png';
 export const startIcon =
   'https://res.cloudinary.com/krishanucloud/image/upload/v1704351629/star_smmfnw.png';
+export const downArrowIcon =
+  'https://res.cloudinary.com/krishanucloud/image/upload/v1704360164/downArrow_w8zm0b.png';
