@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import IndexesView from '../components/IndexesView';
 import IndexDataCard from '../components/Cards/IndexDataCard';
 import {useBottomTabBarHeight} from '@react-navigation/bottom-tabs';
+import {indexesData} from '../data/indexesData';
 
 const DashBoardScreeen = () => {
   const bottomBarHeight = useBottomTabBarHeight();
@@ -20,22 +21,26 @@ const DashBoardScreeen = () => {
           <View className="mt-8">
             <IndexesView />
           </View>
-          <View className=" mt-8 w-full h-40 ">
-            <IndexDataCard
-              indexName="WETH-DAI-WBTC"
-              priceChange={1.7}
-              currentPrice={0.99}
-              profitLoss={-0.11}
-            />
-          </View>
-          <View className=" mt-8 w-full h-40 ">
+          {indexesData.map(item => {
+            return (
+              <View key={item.id} className=" mt-8 w-full h-40 ">
+                <IndexDataCard
+                  indexName={item.indexName}
+                  priceChange={item.priceChange}
+                  currentPrice={item.currentPrice}
+                  profitLoss={item.profitLoss}
+                />
+              </View>
+            );
+          })}
+          {/* <View className=" mt-8 w-full h-40 ">
             <IndexDataCard
               indexName="WETH-DAI-WBTC"
               priceChange={1.7}
               currentPrice={0.99}
               profitLoss={0.21}
             />
-          </View>
+          </View> */}
         </View>
         {/* PlaceHOLDER Block */}
         <View className=" w-full" style={{height: bottomBarHeight}} />
