@@ -8,7 +8,7 @@ interface Props {
 
 const IndexCard: React.FC<Props> = ({indexName, currBalance, indexLogo}) => {
   return (
-    <View className="flex w-full h-full bg-white justify-between rounded-xl p-4">
+    <View className="flex w-full h-full bg-[#8247E5]/10 justify-between rounded-xl p-4">
       <View className=" w-full flex flex-row justify-between">
         <Text className=' text-lg font-bold text-black'>{indexName}</Text>
         <Image
