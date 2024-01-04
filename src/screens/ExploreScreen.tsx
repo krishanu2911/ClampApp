@@ -2,6 +2,7 @@ import {ScrollView, Text, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Header from '../components/Header';
 import ExploreIndexCard from '../components/Cards/ExploreIndexCard';
+import {exploreData} from '../data/exploreData';
 
 const ExploreScreeen = () => {
   return (
@@ -14,15 +15,13 @@ const ExploreScreeen = () => {
           <Text className=" text-base font-semibold text-[#00000099]">
             Buy any crypto inex anytime anywhere
           </Text>
-          <View className=" w-full h-48 my-4 ">
-            <ExploreIndexCard title="WETH-DAI-WBTC" priceChange={-2} />
-          </View>
-          <View className=" w-full h-48 my-4 ">
-            <ExploreIndexCard title="WETH-DAI-WBTC" priceChange={-2} />
-          </View>
-          <View className=" w-full h-48 my-4 ">
-            <ExploreIndexCard title="WETH-DAI-WBTC" priceChange={-2} />
-          </View>
+          {exploreData.map(item => {
+            return (
+              <View key={item.id} className=" w-full h-48 my-4 ">
+                <ExploreIndexCard title={item.title} priceChange={item.priceChange} />
+              </View>
+            );
+          })}
         </View>
       </ScrollView>
     </SafeAreaView>
