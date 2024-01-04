@@ -1,5 +1,4 @@
 import {createDrawerNavigator} from '@react-navigation/drawer';
-import {View} from 'react-native';
 import MainTabsNavigator from './MainTabs';
 import DrawerView from '../components/Drawer/DrawerView';
 

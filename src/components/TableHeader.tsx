@@ -1,8 +1,9 @@
-import { Text, View } from "react-native";
+import {Text, View} from 'react-native';
 
 const TableHeader = () => {
-  return<View className=" w-full mb-4">
-    <View className=" w-full h-10 flex flex-row items-center px-1">
+  return (
+    <View className=" w-full mb-4">
+      <View className=" w-full h-10 flex flex-row items-center px-1">
         <View className="flex-1">
           <Text className=" text-sm text-black font-semibold ">
             Hash Number
@@ -10,16 +11,15 @@ const TableHeader = () => {
         </View>
         <View className=" flex-1">
           <Text className=" text-sm text-black font-semibold ">
-          Transaction Type
+            Transaction Type
           </Text>
         </View>
         <View className=" flex-1">
-          <Text className="text-sm text-black font-semibold ">
-            Token Name
-          </Text>
+          <Text className="text-sm text-black font-semibold ">Token Name</Text>
         </View>
       </View>
-  </View>
+    </View>
+  );
 };
 
 export default TableHeader;

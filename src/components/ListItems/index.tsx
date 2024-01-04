@@ -59,13 +59,17 @@ const ListItems: React.FC<Props> = ({
           {composition.map(item => {
             return (
               <View key={`${item.value}_clamp`} className=" flex flex-row">
-                <Text className=' text-black font-semibold'>{item.indexName}</Text>
-                <Text className=' text-[#00000099] font-semibold ml-2'>{item.value}</Text>
+                <Text className=" text-black font-semibold">
+                  {item.indexName}
+                </Text>
+                <Text className=" text-[#00000099] font-semibold ml-2">
+                  {item.value}
+                </Text>
               </View>
             );
           })}
           <Text className=" text-[#00000099] font-bold my-2">Age</Text>
-          <Text className=' text-black font-semibold'>{age}</Text>
+          <Text className=" text-black font-semibold">{age}</Text>
         </View>
       ) : null}
       <View className=" w-full h-1 border-b border-b-black/20 my-2" />
