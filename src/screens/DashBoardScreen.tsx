@@ -12,7 +12,7 @@ const DashBoardScreeen = () => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         className="w-full h-full">
-        <Header />
+        <Header showProfile={true} />
         <View className=" flex-1 mt-4 pt-4">
           <Text className=" text-base font-semibold text-[#00000099]">
             Manage all the indexes you've bought from one place.
