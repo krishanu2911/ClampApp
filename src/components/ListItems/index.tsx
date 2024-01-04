@@ -1,21 +1,11 @@
 import {useState} from 'react';
 import {Image, Text, TouchableOpacity, View} from 'react-native';
 import {downArrowIcon} from '../../constants/imageUrl';
+import { HistoryItemProps } from '../../data/historyData';
 
-interface indexCompositionInterface {
-  indexName: string;
-  value: number;
-}
 
-interface Props {
-  hashNumber: string;
-  transactionType: 'Deposit' | 'Swap';
-  tokenName: string;
-  composition: indexCompositionInterface[];
-  age: string;
-}
 
-const ListItems: React.FC<Props> = ({
+const ListItems: React.FC<HistoryItemProps> = ({
   hashNumber,
   transactionType,
   tokenName,

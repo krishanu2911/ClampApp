@@ -3,6 +3,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import Header from '../components/Header';
 import ListItems from '../components/ListItems';
 import TableHeader from '../components/TableHeader';
+import { historyData } from '../data/historyData';
 
 const HistoryScreeen = () => {
   return (
@@ -13,26 +14,16 @@ const HistoryScreeen = () => {
         <Header headerTile="History" />
         <View className=" flex-1 mt-4 pt-4">
           <TableHeader />
-          <ListItems
-            hashNumber="0x8123...6a8e"
-            transactionType="Deposit"
-            tokenName="WETH-DAI-WBTC"
-            age="10 second ago"
-            composition={[
-              {indexName: 'WETH', value: 234332},
-              {indexName: 'DAI', value: 211332},
-            ]}
+          {historyData.map((item) => {
+            return <ListItems
+            key={item.hashNumber}
+            hashNumber={item.hashNumber}
+            transactionType={item.transactionType}
+            tokenName={item.tokenName}
+            age={item.age}
+            composition={item.composition}
           />
-          <ListItems
-            hashNumber="0x8123...6a8e"
-            transactionType="Deposit"
-            tokenName="WETH-DAI-WBTC"
-            age="10 second ago"
-            composition={[
-              {indexName: 'WETH', value: 234332},
-              {indexName: 'DAI', value: 211332},
-            ]}
-          />
+          })}
         </View>
       </ScrollView>
     </SafeAreaView>
