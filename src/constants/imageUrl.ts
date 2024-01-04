@@ -6,3 +6,5 @@ export const clockIcon =
   'https://res.cloudinary.com/krishanucloud/image/upload/v1704296394/historyClamp_yhibk8.png';
 export const polygonIcon =
   'https://res.cloudinary.com/krishanucloud/image/upload/v1704340841/polygonIcon_ebatzw.png';
+export const startIcon =
+  'https://res.cloudinary.com/krishanucloud/image/upload/v1704351629/star_smmfnw.png';
