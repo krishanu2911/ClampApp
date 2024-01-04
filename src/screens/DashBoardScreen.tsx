@@ -4,6 +4,7 @@ import {DrawerActions, useNavigation} from '@react-navigation/native';
 import Header from '../components/Header';
 import IndexCard from '../components/Cards/IndexCard';
 import {polygonIcon} from '../constants/imageUrl';
+import IndexesView from '../components/IndexesView';
 
 const DashBoardScreeen = () => {
   const navigation = useNavigation();
@@ -17,26 +18,8 @@ const DashBoardScreeen = () => {
         <Text className=" text-base font-semibold text-[#00000099]">
           Manage all the indexes you've bought from one place.
         </Text>
-        <View>
-          <ScrollView
-            showsHorizontalScrollIndicator={false}
-            horizontal={true}
-            className=" h-32 mt-8">
-            <View className=" w-60 h-full mr-2">
-              <IndexCard
-                indexName="Matic"
-                indexLogo={polygonIcon}
-                currBalance="0.14354734"
-              />
-            </View>
-            <View className=" w-60 h-full">
-              <IndexCard
-                indexName="Matic"
-                indexLogo={polygonIcon}
-                currBalance="0.14354734"
-              />
-            </View>
-          </ScrollView>
+        <View className='mt-8'>
+          <IndexesView />
         </View>
 
         <View className=" w-1/2 rounded-lg bg-white p-5">
