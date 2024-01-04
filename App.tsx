@@ -2,9 +2,8 @@ import 'react-native-gesture-handler';
 import {enableScreens} from 'react-native-screens';
 
 import React from 'react';
-import {StatusBar, Text, View} from 'react-native';
+import {StatusBar} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
-import MainStackNavigator from './src/route/MainTabs';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import DrawerNavigator from './src/route/DrawerNavigator';
 
