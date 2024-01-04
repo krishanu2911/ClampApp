@@ -1,6 +1,6 @@
 import {createDrawerNavigator} from '@react-navigation/drawer';
-import {View} from 'react-native';
 import MainTabsNavigator from './MainTabs';
+import DrawerView from '../components/Drawer/DrawerView';
 
 const Drawer = createDrawerNavigator();
 
@@ -8,7 +8,7 @@ const DrawerNavigator = () => {
   return (
     <Drawer.Navigator
       initialRouteName="Home"
-      drawerContent={() => <View className=" flex-1 bg-red-400"></View>}
+      drawerContent={DrawerView}
       useLegacyImplementation={false}
       screenOptions={{
         swipeEnabled: true,
