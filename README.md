@@ -1,3 +1,9 @@
+Demo: 
+
+https://github.com/krishanu2911/ClampApp/assets/75560307/60d886dd-d69e-4cf1-abd4-f235e5325119
+
+
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
